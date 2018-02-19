@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar color="dark-orange">
+        <ion-title>Login</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div>
+        <ion-item>
+            <ion-label floating>Email Address</ion-label>
+            <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <div id="topButtons">
+            <button ion-button color="secondary" (click)="login(user)">login</button>
+            <button ion-button color="danger" (click)="register()">Register</button>
+        </div>
+
+        <div id="topButtons">
+            <ion-checkbox [(ngModel)]="checkRemember" (ionChange)="rememberMe()"></ion-checkbox>
+            <ion-label>Remember Password</ion-label>
+
+            <ion-label (click)='forgotPassword()'>Forgot Password</ion-label>
+        </div>
+    </div>
+</ion-content>

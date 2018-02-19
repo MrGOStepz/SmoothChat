@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar color="dark-orange">
+        <ion-title>Friends</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+        <ion-item *ngFor="let friend of friendsListRef$ | async;">
+            <button menuClose no-lines ion-item (click)="popupChat(friend)">
+      {{ friend.username }}
+  </button>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

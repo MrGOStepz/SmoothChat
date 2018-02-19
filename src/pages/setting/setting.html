@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="dark-orange">
+        <ion-title>
+            Setting
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <button class='box' ion-button icon-left color="danger" (click)="addFriend()">
+          <ion-icon name="add-circle"></ion-icon>
+          Add Friend
+        </button>
+            </ion-col>
+            <ion-col>
+                <button class='box' ion-button icon-left color="danger" (click)="updateProfile()">
+                    <ion-icon name="person"></ion-icon>
+                    Profile
+                  </button>
+            </ion-col>
+            <ion-col>
+                <button class='box' ion-button icon-left color="danger" (click)="logout()">
+                    <ion-icon name="home"></ion-icon>
+                    Logout
+                  </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

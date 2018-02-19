@@ -1,0 +1,28 @@
+<ion-header>
+
+    <ion-navbar color="dark-orange">
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+        </ion-buttons>
+
+        <ion-title>Search Friends</ion-title>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+        <ion-item no-lines *ngFor="let friend of friendsListRef$ | async;">
+            <button menuClose ion-item (click)="setFriend(friend)">
+          {{ friend.username }}
+      </button>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

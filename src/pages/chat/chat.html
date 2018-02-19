@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar color="dark-orange">
+        <ion-title>
+            Chat
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let groupChat of groupListRef$ | async;" (click)="openGroupChat(groupChat)">
+          {{ groupChat.name }}
+        </button>
+    </ion-list>
+</ion-content>
